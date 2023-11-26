@@ -1,0 +1,117 @@
+.pnl-content .box {
+    background-color: white;
+    padding: 15px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24) !important;
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+    border-right: 5px #b9886a solid;
+    border-radius: 4px;
+  }
+  
+  .panel-title {
+    font-size: 14px;
+    font-family: IRANSans_Bold;
+    margin-bottom: 15px;
+  }
+  
+  .panel-breadcrumb li {
+    font-size: 13px;
+    color: #7D4A2B;
+    font-family: IRANSans_Bold !important;
+  }
+  
+  .panel-breadcrumb li:not(:last-child)::after {
+    margin: 0 5px;
+    content: "/";
+  }
+  
+  .panel-breadcrumb li.current {
+    color: #b9886a;
+  }
+  
+  .pnl-content .p-inputtext,
+  .pnl-content input,
+  .pnl-content textarea {
+    width: 100% !important;
+  }
+  
+  
+  .pnl-content .p-inputtext:enabled:hover,
+  .pnl-content input:hover,
+  .pnl-content textarea:hover {
+    border-color: #7D4A2B !important;
+  }
+  
+  .pnl-content .p-dropdown:not(.p-disabled):hover {
+    border-color: #7D4A2B !important;
+    box-shadow: 0 0 0 0.2rem #a2a2a2 !important;
+  }
+.form{
+    margin-top: 30px;
+    padding: 0 40px;
+}
+
+.form-label {
+    font-size: 14px;
+    font-family: IRANSans_Bold !important;
+    color: #777;
+    margin-left: 10px;
+}
+
+:host::ng-deep .p-button {
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-family: IRANSans_Bold !important;
+    background-color: #7D4A2B;
+    border-color: #b47144;
+    padding: 10px 35px;
+}
+
+:host::ng-deep .p-button:hover {
+    background-color: #7D4A2B;
+    border-color: #b47144;
+}
+
+input {
+    height: 45px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-family: IRANSans_Bold !important;
+}
+
+input::placeholder {
+    color: #777;
+    font-size: 12px;
+    padding-right: 5px;
+    font-family: IRANSans_Bold !important;
+}
+input,
+:host::ng-deep .p-inputtext,
+:host::ng-deep .p-dropdown,
+:host::ng-deep .p-chips,
+.p-inputtext,
+.p-dropdown,
+.p-chips,
+textarea {
+    width: 100% !important;
+}
+
+
+textarea {
+    font-family: IRANSans_Light !important;
+    font-size: 14px;
+}
+:host::ng-deep textarea::placeholder {
+    font-family: IRANSans_Light !important;
+    font-size: 14px;
+}
+.alert-danger{
+    font-family: IRANSans_bold !important;
+    font-size: 14px;
+}
+
+
+@media (max-width: 991px) {   
+   .form{
+       padding: 0 30px;
+   }
+}

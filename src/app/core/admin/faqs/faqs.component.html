@@ -1,0 +1,97 @@
+<p-toast position="center"></p-toast>
+<p-confirmDialog [style]="{ width: '50vw' }" [baseZIndex]="10000"></p-confirmDialog>
+
+<div class="pnl-content p-3">
+  <div class="row no-gutters">
+    <div class="col-lg-12">
+      <div class="box">
+        <div class="row no-gutters justify-content-center">
+          <div class="col-lg-12 col-sm-12 align-self-center">
+            <ul class="list-inline panel-breadcrumb">
+              <li class="list-inline-item pointer" [routerLink]="['/']">پنل ادمین</li>
+              <li class="list-inline-item current" [routerLink]="['/']">سوالات متداول</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="pnl-content p-3">
+  <div class="row no-gutters">
+    <div class="col-lg-12">
+      <div class="box text-right">
+        <p-table #dt [value]="faqs" responsiveLayout="stack" dataKey="id" [rows]="5" [showCurrentPageReport]="true" [paginator]="true"
+          currentPageReportTemplate="{first} تا {last} از {totalRecords}" [filterDelay]="0"
+          [globalFilterFields]="['question', 'reply']">
+          <ng-template pTemplate="caption">
+            <div class="table-header row">
+              <div class="col-sm-6 text-right">
+                <button pButton pRipple label="جدید" icon="pi pi-plus" class="p-button p-mr-2 p-button-icon-right"
+                  (click)="showAddFaqDialog()"></button>
+              </div>
+              <div class="col-sm-12">
+                <span class="p-input-icon-left w-100 mt-3">
+                  <i class="pi pi-search"></i>
+                  <input pInputText type="text" class="w-100"
+                    (input)="dt.filterGlobal($any($event.target).value, 'contains')" placeholder="جستجو کلی" />
+                </span>
+              </div>
+            </div>
+          </ng-template>
+          <ng-template pTemplate="header">
+            <tr>
+              <th width="5%"></th>
+              <th>سوال</th>
+              <th width="10%">عملیات</th>
+            </tr>
+          </ng-template>
+          <ng-template pTemplate="body" let-data let-editing="editing" let-ri="rowIndex" let-expanded="expanded">
+            <tr>
+              <td>
+                <button type="button" pButton pRipple [pRowToggler]="data"
+                  class="p-button-rounded p-button-text p-button-success"
+                  [icon]="expanded ? 'pi pi-chevron-down' : 'pi pi-chevron-right'"></button>
+              </td>
+              <td [pEditableColumn]="data.question" pEditableColumnField="question" [pEditableColumnRowIndex]="ri">
+                <p-cellEditor>
+                  <ng-template pTemplate="input" [formGroup]="form">
+                    <input pInputText type="text" formControlName="question" [(ngModel)]="data.question" required>
+                  </ng-template>
+                  <ng-template pTemplate="output">
+                    {{data.question}}
+                  </ng-template>
+                </p-cellEditor>
+              </td>
+              <td>
+                <button pButton pRipple icon="pi pi-check" (click)="updateFaq(data._id)"
+                  class="p-button-rounded p-button-text p-button-success"></button>
+                <button pButton pRipple icon="pi pi-trash" (click)="deleteFaq(data._id)"
+                  class="p-button-rounded p-button-text p-button-danger"></button>
+              </td>
+            </tr>
+          </ng-template>
+          <ng-template pTemplate="rowexpansion" let-data>
+            <tr>
+              <td colspan="7" [pEditableColumn]="data.reply" pEditableColumnField="reply">
+                <p-cellEditor>
+                  <ng-template pTemplate="input" [formGroup]="form">
+                    <input pInputText type="text" formControlName="reply" [(ngModel)]="data.reply" required>
+                  </ng-template>
+                  <ng-template pTemplate="output">
+                    {{data.reply}}
+                  </ng-template>
+                </p-cellEditor>
+              </td>
+            </tr>
+          </ng-template>
+          <ng-template pTemplate="emptymessage">
+            <tr>
+              <td colspan="3">هیچ رکوردی یافت نشد.</td>
+            </tr>
+          </ng-template>
+        </p-table>
+      </div>
+    </div>
+  </div>
+</div>

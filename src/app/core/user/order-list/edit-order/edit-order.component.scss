@@ -1,0 +1,169 @@
+:host::ng-deep .p-button {
+    font-size: 14px;
+    font-family: IRANSans_Bold !important;
+    padding: 8px 20px;
+}
+:host::ng-deep .number .p-button {
+    padding: 8px 40px;
+}
+:host::ng-deep .submit .p-button:hover {
+    background-color: #20b66f;
+    border-color: #20b66f;
+}
+
+:host::ng-deep .upload .p-button,:host::ng-deep .submit .p-button{
+    background-color: #20b66f;
+    border-color: #20b66f;
+}
+
+:host::ng-deep .submit .p-button:hover {
+    background-color: #20b66f;
+    border-color: #20b66f;
+}
+
+:host::ng-deep .p-inputnumber-buttons-horizontal {
+    direction: ltr;
+}
+
+:host::ng-deep .p-inputnumber-buttons-horizontal .p-inputnumber-input {
+    font-size: 12px;
+    font-family: IRANSans_Bold !important;
+    text-align: center;
+}
+
+input[type="text"] {
+    height: 45px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-family: IRANSans_Bold !important;
+}
+
+input[type="text"]::placeholder {
+    color: #777;
+    font-size: 12px;
+    padding-right: 5px;
+    font-family: IRANSans_Bold !important;
+}
+
+:host::ng-deep .p-panel {
+    border-color: #20b66f;
+}
+
+:host::ng-deep .p-panel .p-panel-header {
+    color: #fff !important;
+    font-family: IRANSans_Bold !important;
+    font-size: 18px;
+    background: #20b66f;
+}
+
+input,
+:host::ng-deep .p-inputtext,
+:host::ng-deep .p-inputnumber-input,
+:host::ng-deep .p-dropdown,
+:host::ng-deep .p-chips,
+.p-inputtext,
+.p-dropdown,
+.p-chips,
+textarea {
+    width: 100% !important;
+}
+
+:host::ng-deep .p-dropdown {
+    border-radius: 5px;
+
+}
+
+:host::ng-deep .p-dropdown .p-dropdown-label {
+    font-family: IRANSans_Bold !important;
+    font-size: 12px;
+    color: #777;
+}
+
+:host::ng-deep .p-dropdown-panel .p-dropdown-items .p-dropdown-item {
+    font-family: IRANSans_Light !important;
+    font-size: 14px;
+}
+.form{
+    margin-top: 30px;
+}
+
+.form-label {
+    font-size: 14px;
+    font-family: IRANSans_Bold !important;
+    color: #777;
+    margin-left: 10px;
+}
+
+textarea {
+    font-family: IRANSans_Light !important;
+    font-size: 14px;
+}
+
+:host::ng-deep textarea::placeholder {
+    font-family: IRANSans_Bold !important;
+    font-size: 14px;
+}
+
+:host::ng-deep .p-button .p-button-icon-left {
+    margin-left: 5px;
+}
+
+:host::ng-deep .p-inputswitch.p-inputswitch-checked .p-inputswitch-slider {
+    background: #20b66f;
+}
+
+:host::ng-deep .p-inputswitch.p-inputswitch-checked .p-inputswitch-slider:hover {
+    background: #20b66f;
+}
+
+:host::ng-deep .p-checkbox .p-checkbox-box:hover {
+    border-color: #20b66f;
+}
+
+:host::ng-deep .p-checkbox:not(.p-checkbox-disabled) .p-checkbox-box.p-highlight {
+    background: #20b66f;
+    border-color: #20b66f;
+}
+:host::ng-deep .p-button .p-button-label{
+    font-family: IRANSans_Light !important;
+    font-size: 14px;
+    
+}
+
+:host::ng-deep .p-buttonset {
+    direction: ltr;
+}
+:host::ng-deep .p-selectbutton .p-button.p-highlight{
+    background: #20b66f;
+    border-color: #20b66f;
+}
+.form-label{
+    margin-bottom: 25px;
+}
+.title{
+    font-family: IRANSans_Bold !important;
+    font-size: 14px;
+    color:#777;
+}
+.checkbox{
+    font-family: IRANSans_Bold !important;
+    font-size: 12px;
+    margin-right: 2px;
+    color:#777;
+}
+
+@media (max-width: 991px) {   
+     :host::ng-deep .upload .p-button {
+        margin-bottom: 5px;
+        padding: 8px 10px;
+
+    }
+    :host::ng-deep .p-button .p-button-label{
+        font-size: 12px;
+    }
+}
+label{
+    font-size: 12px;
+    color: #999;
+    padding-bottom: 2px;
+}

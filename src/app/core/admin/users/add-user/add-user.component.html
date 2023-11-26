@@ -1,0 +1,25 @@
+<p-toast position="center"></p-toast>
+<div class="container-fluid mt-4 text-right">
+    <div class="row pnl-content">
+        <div *ngFor="let error of errorMessages.mobile">
+            <div class="alert alert-danger" role="alert" *ngIf="
+           form.get('mobile').hasError(error.type) &&  (form.get('mobile').dirty || form.get('mobile').touched)">
+                {{ error.message }}
+            </div>
+        </div>
+        <form [formGroup]="form" (ngSubmit)="submitForm()">
+            <div class="row">
+                <div class="col-lg-3 col-sm-12 mb-3">
+                    <input pKeyFilter="int" formControlName="mobile" maxlength="11" minlength="11" name="mobile"
+                        pInputText placeholder="  شماره موبایل" required />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col d-flex flex-row-reverse">
+                    <button type="submit" pButton label="ثبت" [disabled]="form.invalid"
+                        class="panel-dark-button mt-3"></button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

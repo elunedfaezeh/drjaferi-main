@@ -1,0 +1,27 @@
+<div id="printSectionId" #epltable dir="rtl" class="justify-content-center">
+    <div class="container">
+        <p-panel>
+            <ng-template pTemplate="header">
+                <h1>فرم سفارش</h1>
+            </ng-template>
+            <div class="row">
+                <div class="col-lg-6">
+                    <h3> کد سفارش: {{order.code}}</h3>
+                    <h3>عنوان سفارش: {{order.title}}</h3>
+                </div>
+                <div class="col-lg-6">
+                    <h3>تعداد: {{order.number}}</h3>
+                    <h3>وضعیت سفارش: {{order.status}}</h3>
+                </div>
+                <div class="col-lg-6">
+                    <h3>نوع مدار: {{order.pcbType}}</h3>
+                    <h3>جنس برد : {{order.material}}</h3>
+                </div>
+            </div>
+        </p-panel>
+    </div>
+</div>
+<div class="text-center mt-3 mb-3">
+    <button pButton type="button" [useExistingCss]="true" label="چاپ" printSectionId="printSectionId" ngxPrint
+        icon="pi pi-print" iconPos="left"></button>
+</div>

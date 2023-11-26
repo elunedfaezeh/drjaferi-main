@@ -1,0 +1,103 @@
+.hero {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  font-family: 'IRANSans_Bold' !important;
+  color: #7D4A2B;
+}
+
+.hero h1 {
+  font-size: 24px;
+  margin: 8px 0;
+  font-family: 'IRANSans_Bold' !important;
+  
+}
+
+.hero h2 {
+  margin: 8px 0;
+  font-size: 20px;
+  font-family: 'IRANSans_Bold' !important;
+  color: #151515;
+}
+
+.hero h3 {
+  margin: 8px 0;
+  font-size: 18px;
+  font-family: 'IRANSans_Bold' !important;
+}
+
+.hero p {
+  color: #000;
+  margin: 8px 0 0;
+  font-size: 16px;
+  line-height: 30px;
+  text-align: justify;
+  font-family: 'IRANSans_Light' !important;
+}
+
+.hero .btn-get-started {
+  margin-top: 30px;
+  padding: 10px 60px;
+  border-radius: 20px;
+  transition: 0.5s;
+  color: #fff;
+  background: #aa8b77;
+  font-family: 'IRANSans_Bold' !important;
+  font-size: 16px;
+}
+
+.hero .btn-get-started:hover {
+  transform: translateX(5px);
+  background: #7D4A2B;
+}
+
+
+@media (max-width: 991px) {
+  .hero {
+    height: auto;
+    padding: 120px 0 60px 0;
+  }
+
+  .hero .hero-img {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .hero .hero-img img {
+    width: 80%;
+  }
+}
+@media (max-width: 481px) {
+  .hero {
+    height: auto;
+   
+  }
+
+  .hero .hero-img {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .hero .hero-img img {
+    width: 80%;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .hero {
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 22px;
+  }
+
+  .hero h2 {
+    font-size: 20px;
+  }
+
+  .hero .hero-img img {
+    width: 100%;
+  }
+}

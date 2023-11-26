@@ -1,0 +1,107 @@
+h5 {
+  font-family: IRANSans_Bold !important;
+
+}
+
+.card-img-left {
+  width: 55%;
+  background: scroll center url('../../../../assets/images/top-view-career-guidance-items-judges.jpg');
+  background-size: cover;
+
+}
+
+li {
+  font-family: 'IRANSans_Bold' !important;
+  font-size: 12px;
+}
+
+.btn-login {
+  color: #fff;
+  font-size: 14px;
+  padding: 8px 60px;
+  border-radius: 25px;
+  background-color: #7D4A2B;
+  font-family: IRANSans_Bold !important;
+}
+
+form {
+  font-family: IRANSans_Light !important;
+}
+
+input {
+  height: 48px !important;
+  border-radius: 85px;
+  font-family: 'IRANSans_Light' !important;
+  border: #7D4A2B 1px solid;
+}
+
+textarea.input1 {
+  // min-height: 150px;
+  border-radius: 25px;
+  padding: 12px 30px;
+  font-family: 'IRANSans_Light' !important;
+  border: #7D4A2B 1px solid;
+}
+
+textarea.input1+.shadow-input1 {
+
+  border: #7D4A2B 1px solid;
+
+}
+
+
+.wrap-input1 {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  margin-bottom: 20px;
+}
+
+.input1 {
+  display: block;
+  width: 100%;
+  font-family: Montserrat-Bold;
+  font-size: 15px;
+  line-height: 1.5;
+  border-radius: 25px;
+
+}
+
+#links {
+  font-size: 14px;
+  text-align: center;
+
+}
+
+#links .social-links {
+  margin: 0 0 20px 0;
+}
+
+#links .social-links a {
+  font-size: 25px;
+  display: inline-block;
+  color: #4e2911;
+  line-height: 1;
+  padding: 2px 0;
+  margin-right: 4px;
+  border-radius: 50%;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+}
+
+#links .social-links a:hover {
+  transform: translateY(-10px);
+}
+
+:host::ng-deep .p-message .p-message-detail {
+  font-size: 16px;
+  font-family: IRANSans_Light !important;
+}
+
+:host::ng-deep .p-toast .p-toast-message .p-toast-message-content .p-toast-summary {
+  font-size: 16px;
+  font-family: IRANSans_Light !important;
+  margin-right: 10px;
+}

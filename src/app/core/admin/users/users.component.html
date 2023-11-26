@@ -1,0 +1,77 @@
+<p-toast position="center"></p-toast>
+<p-confirmDialog [style]="{ width: '50vw' }" [baseZIndex]="10000"></p-confirmDialog>
+<div class="pnl-content p-3">
+    <div class="box">
+        <div class="row justify-content-center">
+            <div class="col-lg-12 col-sm-12 align-items-center">
+                <ul class="list-inline panel-breadcrumb">
+                    <li class="list-inline-item pointer" [routerLink]="['/']">پنل ادمین</li>
+                    <li class="list-inline-item current" [routerLink]="['/']">لیست کاربران</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="pnl-content p-3">
+    <div class="row no-gutters">
+        <div class="col-lg-12">
+            <div class="box text-right">
+        <p-table #dt1 [value]="users" responsiveLayout="stack" [globalFilterFields]="['fullName','mobile']">
+            <ng-template pTemplate="caption">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <span class="p-input-icon-left w-100">
+                            <i class="pi pi-search"></i>
+                            <input pInputText type="text"
+                                (input)="dt1.filterGlobal($any($event.target).value, 'contains')"
+                                placeholder="جستجو کلی" />
+                        </span>
+                    </div>
+                </div>
+            </ng-template>
+            <ng-template pTemplate="header">
+                <tr>
+                    <th>پروفایل</th>
+                    <th>شماره موبایل</th>
+                    <th>نام و نام خانوادگی</th>
+                    <th>عملیات</th>
+                </tr>
+                <!-- <tr>
+                        <th>
+                            <input pInputText type="text"
+                                (input)="dt1.filter($any($event.target).value, 'mobile', 'contains')"
+                                [value]="$any(dt1.filters['mobile'])?.value" placeholder="Search by Mobile"
+                                class="w-full">
+                        </th>
+                        <th>
+                            <input pInputText type="text"
+                                (input)="dt1.filter($any($event.target).value, 'fullName', 'contains')"
+                                [value]="$any(dt1.filters['fullName'])?.value" placeholder="Search by Name"
+                                class="w-full">
+                        </th>
+                        <th>
+                            <input pInputText type="text"
+                                (input)="dt1.filter($any($event.target).value, 'code', 'contains')"
+                                [value]="$any(dt1.filters['code'])?.value" placeholder="Search by Code" class="w-full">
+                        </th>
+                        <th></th>
+                    </tr> -->
+            </ng-template>
+            <ng-template pTemplate="body" let-user>
+                <tr>
+                    <td><img width="70" [src]="user.image" class="img-fluid" /></td>
+                    <td>{{user.mobile}}</td>
+                    <td>{{user.fullName}}</td>
+                    <td>
+                        <button pButton pRipple icon="pi pi-pencil" (click)="showEdit(user._id)"
+                            class="p-button-rounded p-button-text p-button-warning"></button>
+                        <button pButton pRipple icon="pi pi-trash" (click)="deleteUser(user._id)"
+                            class="p-button-rounded p-button-text p-button-danger"></button>
+                    </td>
+
+                </tr>
+            </ng-template>
+        </p-table>
+    </div>
+</div>

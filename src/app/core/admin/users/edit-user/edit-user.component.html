@@ -1,0 +1,59 @@
+<p-toast position="center"></p-toast>
+<div class="container-fluid mt-4 text-right">
+    <div class="row pnl-content">
+        <form [formGroup]="form" (ngSubmit)="submitForm()">
+            <div class="row">
+                <div class="col-lg-3 col-sm-12 mb-3">
+                    <label class="form-label"> شماره موبایل</label>
+                    <input type="text" pKeyFilter="int" formControlName="mobile" maxlength="11" minlength="11"
+                        name="mobile" pInputText placeholder="  شماره موبایل" required />
+                </div>
+                <div class="col-lg-3 col-sm-12 mb-3">
+                    <label class="form-label">نام و نام خانوادگی </label>
+                    <input name="fullName" type="text" pInputText placeholder="نام و نام خانوادگی"
+                        formControlName="fullName" />
+                </div>
+                <div class="col-lg-3 col-sm-12 mb-3">
+                    <label class="form-label">نام نماینده </label>
+                    <input type="text" pInputText placeholder="نام نماینده" formControlName="fullName" />
+                </div>
+                <div class="col-lg-3 col-sm-12 mb-3">
+                    <label class="form-label">تلفن ثابت</label>
+                    <input type="text" pInputText placeholder="تلفن ثابت" formControlName="phone" />
+                </div>
+                <div class="col-lg-3 col-sm-12 mb-3">
+                    <label class="form-label">ایمیل</label>
+                    <input type="text" pInputText placeholder="ایمیل" formControlName="email" />
+                </div>
+                <div class="col-lg-3 col-sm-12 mb-3">
+                    <label class="form-label"> آدرس </label>
+                    <input type="text" pInputText placeholder="آدرس" formControlName="address" />
+                </div>
+                <div class="col-lg-3 col-sm-12 mb-3">
+                    <label class="form-label">کد پستی</label>
+                    <input type="text" pInputText placeholder="کد پستی" formControlName="postalCode" />
+                </div>
+                <div class="col-lg-3 col-sm-12 mb-3">
+                    <label class="form-label">نام شرکت </label>
+
+                    <input type="text" pInputText placeholder="نام شرکت" formControlName="companyName" />
+                </div>
+            </div>
+
+            <div class="row">
+                <p-fileUpload chooseLabel="انتخاب تصویر" uploadLabel="آپلود تصویر" cancelLabel="انصراف"
+                    [customUpload]="true" (uploadHandler)="onFileUpload($event)"
+                    invalidFileSizeMessageDetail="حداکثر سایز فایل 2 مگابایت می باشد"
+                    invalidFileSizeMessageSummary="اندازه فایل بیش از حد مجاز می باشد" accept="image/jpeg,image/png"
+                    [maxFileSize]="2000000">
+                </p-fileUpload>
+            </div>
+            <div class="row">
+                <div class="col d-flex flex-row-reverse">
+                    <button type="submit" pButton label="ثبت" [disabled]="form.invalid"
+                        class="panel-dark-button mt-3"></button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

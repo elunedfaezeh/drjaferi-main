@@ -1,0 +1,106 @@
+:host::ng-deep .p-toast .p-toast-message .p-toast-message-content .p-toast-summary {
+  font-size: 16px;
+  font-family: IRANSans_Light !important;
+  margin-right: 5px;
+}
+
+:host::ng-deep .p-toast .p-toast-message .p-toast-message-content .p-toast-detail {
+  font-size: 16px;
+  font-family: IRANSans_Light !important;
+}
+
+:host::ng-deep .p-toast .p-toast-message.p-toast-message-error .p-toast-message-icon,
+.p-toast .p-toast-message.p-toast-message-error .p-toast-icon-close {
+  margin-left: 5px;
+}
+.text-danger{
+  font-size: 13px;
+  font-family: IRANSans_Bold !important;
+}
+:host::ng-deep .p-inputtext {
+  color: #777;
+  font-size: 12px;
+  font-family: IRANSans_Bold !important;
+}
+
+:host::ng-deep .p-inputtext::placeholder {
+  color: #777;
+  font-size: 12px;
+  padding-right: 5px;
+  font-family: IRANSans_Bold !important;
+}
+
+.card p {
+  font-size: 13px;
+  font-family: IRANSans_Light !important;
+}
+
+input,
+:host::ng-deep .p-inputtext,
+:host::ng-deep .p-dropdown,
+:host::ng-deep .p-chips,
+.p-inputtext,
+.p-dropdown,
+.p-chips,
+textarea {
+  width: 100% !important;
+}
+
+.gradient {
+  background: linear-gradient(135deg, #a7927e 0%, #d1ad8f 100%);
+}
+
+@media (min-width: 768px) {
+  .gradient-form {
+    height: 100vh !important;
+  }
+}
+
+@media (min-width: 769px) {
+  .gradient {
+    border-top-left-radius: .3rem;
+    border-bottom-left-radius: .3rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .gradient {
+    border-bottom-left-radius: .3rem;
+    border-bottom-right-radius: .3rem;
+  }
+
+  img {
+    max-width: 160px;
+  }
+
+  .input {
+    padding: 20px 95px;
+  }
+}
+img {
+  filter: brightness(0) invert(1);
+}
+
+.input {
+  padding: 10px 15px;
+}
+
+h1 {
+  font-size: 20px;
+  font-family: IRANSans_Bold !important;
+}
+
+:host::ng-deep .p-button {
+  background-color: #7D4A2B;
+  border-color: #7D4A2B;
+}
+
+:host::ng-deep .p-button:hover {
+  background-color: rgb(177, 145, 123);
+  border-color: rgb(177, 145, 123);
+}
+
+:host::ng-deep .p-button .p-button-label {
+  font-family: IRANSans_Bold !important;
+  font-size: 16px;
+}

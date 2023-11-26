@@ -1,0 +1,19 @@
+<p-toast position="center"></p-toast>
+<section class="container">
+    <form [formGroup]="form" (ngSubmit)="submitForm()">
+        <h1 class="text-center mt-4">دوشنبه : 1402/05/21</h1>
+        <div class="row justify-content-center">
+            <div class="col-lg-3" *ngFor="let category of categories">
+                <div class="box">
+                    <p-radioButton [inputId]="category.key" [value]="category" formControlName="time">
+                    </p-radioButton>
+                    <label [for]="category.key">{{ category.name }}</label>
+                </div>
+            </div>
+        </div>
+        <div pRipple class="submit col-lg-12 text-center mt-4">
+            <p-button type="submit" [disabled]="!form.valid" label="مرحله بعد "
+                styleClass="p-button-rounded"></p-button>
+        </div>
+    </form>
+</section>

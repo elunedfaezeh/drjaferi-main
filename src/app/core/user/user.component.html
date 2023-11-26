@@ -1,0 +1,32 @@
+<mat-sidenav-container class="sidenav-container" dir="rtl">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport="true"
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" [mode]="(isHandset$ | async) ? 'over' : 'side'"
+    [opened]="!(isHandset$ | async)">
+    <div class="justify-content-center mt-2">
+      <div class="col text-center ">
+        <p-avatar *ngIf="image==undefined" icon="pi pi-user" size="large" styleClass="mt-3"
+          [style]="{'background-color': '#fff', 'color': '#888'}" shape="circle"></p-avatar>
+        <img *ngIf="image!=undefined" [src]="image" class="img-fluid profile" />
+      </div>
+      <div class="col text-center">
+        <h6 class="mt-2 text-center text-white">{{fullName}}</h6>
+      </div>
+    </div>
+    <p-panelMenu [model]="items" [style]="{'width':'100%','margin-top':'30px'}"></p-panelMenu>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <p-toolbar>
+      <div class="container-fluid">
+        <div class="d-flex flex-row justify-content-between">
+          <button pButton pRipple type="button" icon="pi pi-bars" class="p-button-rounded p-button-text text-white"
+            (click)="drawer.toggle()"></button>
+          <span class="text-center text-white" style="font-family:IRANSans_Light;">پنل کاربر</span>
+          <button pButton pRipple type="button" icon="pi pi-power-off" class="p-button-rounded p-button-text text-white"
+            (click)="logOut()"></button>
+        </div>
+      </div>
+    </p-toolbar>
+    <ng-content></ng-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

@@ -1,0 +1,55 @@
+.box{
+    border: 1px solid #ddd;
+    padding: 8px;
+    border-radius: 5px;
+    font-family: IRANSans_Bold !important;
+    background-color: #dad9d8;
+
+}
+
+h1{
+    font-family: IRANSans_Bold !important;
+    font-size: 16px;
+}
+label {
+    margin-right: 10px !important;
+}
+:host::ng-deep .p-button {
+    font-size: 14px;
+    font-family: IRANSans_Bold !important;
+    padding: 8px 20px;
+}
+:host::ng-deep .number .p-button {
+    padding: 8px 40px;
+}
+:host::ng-deep .submit .p-button {
+    background-color: #aa8b77;
+    border-color: #aa8b77;
+}
+:host::ng-deep .submit .p-button:hover {
+    background-color: #aa8b77;
+    border-color: #aa8b77;
+}
+:host::ng-deep  .p-radiobutton .p-radiobutton-box.p-highlight{
+    border-color: #aa8b77;
+    background-color: #aa8b77;
+}
+:host::ng-deep  .p-radiobutton .p-radiobutton-box.p-highlight:hover{
+    border-color: #aa8b77;
+    background-color: #aa8b77;
+}
+:host::ng-deep .p-message .p-message-detail {
+    font-size: 16px;
+    font-family: IRANSans_Light !important;
+}
+
+:host::ng-deep .p-toast .p-toast-message .p-toast-message-content .p-toast-summary {
+    font-size: 16px;
+    font-family: IRANSans_Light !important;
+    margin-right: 10px;
+}
+
+:host::ng-deep .p-toast .p-toast-message .p-toast-message-content .p-toast-detail {
+    font-size: 16px;
+    font-family: IRANSans_Light !important;
+}

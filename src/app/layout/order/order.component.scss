@@ -1,0 +1,44 @@
+:host::ng-deep .p-steps .p-steps-item .p-menuitem-link {
+    box-shadow: none !important;
+}
+
+:host::ng-deep .p-steps .p-steps-item .p-menuitem-link .p-steps-number {
+    font-size: 14px;
+    font-family: IRANSans_Bold !important;
+}
+
+:host::ng-deep .p-steps .p-steps-item .p-menuitem-link .p-steps-title {
+    font-size: 14px;
+    font-family: IRANSans_Bold !important;
+}
+
+.box {
+    border: #ddd 1px solid;
+    margin: 20px 50px;
+    padding: 30px 0;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 991px) {
+    .box {
+        margin: 20px 30px;
+    }
+
+    :host::ng-deep .p-steps .p-steps-item .p-menuitem-link .p-steps-number {
+        font-size: 12px;
+    }
+
+    :host::ng-deep .p-steps .p-steps-item .p-menuitem-link .p-steps-title {
+        font-size: 12px;
+    }
+}
+
+:host::ng-deep .p-panel .p-panel-header {
+    vertical-align: middle !important;
+    align-items: center;
+}
+
+:host::ng-deep .p-steps .p-steps-item .p-menuitem-link .p-steps-number {
+    background-color: #917f74;
+    color: #ffff;
+}

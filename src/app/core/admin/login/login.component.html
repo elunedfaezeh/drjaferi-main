@@ -1,0 +1,75 @@
+<p-toast position="center"></p-toast>
+
+<section class="h-100 gradient-form">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-xl-10">
+        <div class="card text-black">
+          <div class="row g-0">
+            <div class="col-lg-6">
+              <div class="card-body p-md-5 mx-md-4 p-5">
+                <div class="text-center mb-5">
+                  <h1>پنل مدیریت دکتر اکبر جافری</h1>
+                </div>
+                <form [formGroup]="form" (ngSubmit)="login()">
+                  <div class="row justify-content-center">
+                    <div class="col-12 mt-4">
+                      <span class="p-input-icon-right w-100">
+                        <i class="pi pi-user"></i>
+                        <input class="form-control" formControlName="userName" name="userName" pInputText
+                          placeholder="نام کاربری" required />
+                      </span>
+
+                      <ul class="mt-1 text-right list-inline" *ngFor="let error of errorMessages.userName">
+                        <li class="
+                            font-small
+                            text-danger
+                            font-weight-bold
+                            list-inline-item
+                          " *ngIf="
+                            form.get('userName').hasError(error.type) &&
+                            (form.get('userName').dirty || form.get('userName').touched)
+                          ">
+                          {{ error.message }}
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="col-12 mt-2">
+                      <span class="p-input-icon-right w-100">
+                        <i class="pi pi-key"></i>
+                        <input type="password" class="form-control" formControlName="password" name="password"
+                          pInputText placeholder="رمزعبور" required />
+                      </span>
+
+                      <ul class="mt-1 text-right list-inline" *ngFor="let error of errorMessages.password">
+                        <li class="
+                            font-small
+                            text-danger
+                            font-weight-bold
+                            list-inline-item
+                          " *ngIf="
+                            form.get('password').hasError(error.type) &&
+                            (form.get('password').dirty || form.get('password').touched)
+                          ">
+                          {{ error.message }}
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="row text-center">
+                      <button pButton type="submit" label="ورود" [disabled]="form.invalid"></button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="col-lg-6 d-flex justify-content-center align-items-center gradient">
+              <div class="text-center px-3 py-4 p-md-5 mx-md-4">
+                <img src="../../../../assets/images/logo.png" class="img-fluid" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,28 @@
+<p-toast position="center"></p-toast>
+<section class="form">
+    <div class="row justify-content-center">
+        <form [formGroup]="form" (ngSubmit)="submitForm()">
+            <div class="col-lg-12 col-sm-12 mb-3">
+                <div class="row align-items-center">
+                    <div class="col-lg-4 col-sm-12 mb-3">
+                        <label class="form-label mb-1"> علت مراجعه به وکیل</label>
+                        <p-dropdown [options]="reason" [(ngModel)]="selectedReason" (onChange)="getCases($event.value)" placeholder="انتخاب دسته بندی" formControlName="reason" ></p-dropdown>
+                    </div>
+                    <div class="col-lg-4 col-sm-12 mb-3">
+                        <label class="form-label mb-1">انتخاب نوع پرونده</label>
+                        <p-dropdown [options]="case" placeholder="انتخاب دسته بندی"   formControlName="case"></p-dropdown>
+                    </div>
+                    <div class="col-lg-4 col-sm-12 mb-3">
+                        <label class="form-label mb-1">انتخاب نوع مشاوره </label>
+                        <p-dropdown [options]="kind" placeholder="انتخاب دسته بندی" formControlName="kind"
+                            optionValue="title" optionLabel="title"></p-dropdown>
+                    </div>
+                    <div pRipple class="submit col-lg-12 text-center mt-2">
+                        <p-button type="submit" [disabled]="!form.valid" label="مرحله بعد "
+                            styleClass="p-button-rounded"></p-button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>

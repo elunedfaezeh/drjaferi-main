@@ -1,0 +1,37 @@
+input,
+:host::ng-deep .p-inputtext,
+:host::ng-deep .p-dropdown,
+:host::ng-deep .p-chips,
+.p-inputtext,
+.p-dropdown,
+.p-chips,
+textarea {
+  width: 100% !important;
+}
+
+:host::ng-deep .p-button .p-button-icon-left {
+  margin-left: 10px;
+
+}
+
+:host::ng-deep.p-button .p-button-label {
+  font-family: IRANSans_Light !important;
+  font-size: 14px;
+}
+:host::ng-deep .p-inputtext{
+  font-family: IRANSans_Light !important;
+}
+.alert-danger{
+  font-family: IRANSans_bold !important;
+  font-size: 14px;
+}
+
+:host::ng-deep .p-button {
+  background-color: #20b66f;
+  border-color: #20b66f;
+}
+
+:host::ng-deep .p-button:hover {
+  background-color: #20b66f;
+  border-color: #20b66f;
+}

@@ -1,0 +1,90 @@
+.pnl-content .box {
+    background-color: white;
+    padding: 15px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+    border-right: 5px #7D4A2B solid;
+    border-radius: 4px;
+   
+  }
+  
+  .panel-title {
+    font-size: 14px;
+    font-family: IRANSans_Bold !important;
+    margin-bottom: 15px;
+  }
+  
+  .panel-breadcrumb li {
+    margin: 0;
+    font-size: 13px;
+    color: #7D4A2B;
+    font-family: IRANSans_Bold !important;
+  }
+  .panel-breadcrumb li:not(:last-child)::after {
+    margin: 0 5px;
+    content: "/";
+  }
+  
+  .panel-breadcrumb li.current {
+    color: #726761;
+  }
+  
+  
+  
+
+  
+
+  
+  
+  .support {
+    padding: 5px 0px;
+    margin: 0 10px;
+    
+  }
+
+  
+
+  
+  
+  .services .icon-box {
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 0 10px 40px 10px;
+    background: #fff;
+    box-shadow: 0 10px 29px 0 rgba(68, 88, 144, 0.1);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .services .icon-box:hover {
+    transform: translateY(-5px);
+  }
+  
+  .services .icon {
+    position: absolute;
+    left: -20px;
+    top: calc(50% - 30px);
+  }
+  
+  .services .icon i {
+    font-size: 64px;
+    line-height: 1;
+    transition: 0.5s;
+  }
+  
+  .services .title {
+    margin-left: 40px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 14px;
+    font-family: IRANSans_Bold !important;
+
+  }
+  
+  .services .title a {
+    color: #111;
+  }
+  
+ 
+ 

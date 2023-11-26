@@ -1,0 +1,38 @@
+label {
+  font-size: 18px;
+  color: #444;
+  font-family: IRANSans_Light !important;
+  text-align: right;
+  margin-left: 10px;
+}
+
+
+:host ::ng-deep .tabview .p-tabview-nav {
+  padding: 0;
+  font-size: 14px;
+  border-color: transparent !important;
+}
+
+/* not selected */
+:host ::ng-deep .p-tabview .p-tabview-nav li .p-tabview-nav-link {
+  color: #777;
+}
+
+:host ::ng-deep .p-tabview .p-tabview-panels {
+  text-align: justify;
+}
+
+/* hover */
+:host ::ng-deep .p-tabview .p-tabview-nav li:not(.p-highlight):not(.p-disabled):hover .p-tabview-nav-link {
+  border-color: #007bff;
+  border-color: #007bff;
+  color: #007bff;
+}
+
+/* selected */
+:host ::ng-deep .p-tabview .p-tabview-nav li.p-highlight .p-tabview-nav-link {
+  color: #007bff;
+  border-color: #007bff;
+  border-bottom-width: 2px;
+  outline-color: transparent;
+}

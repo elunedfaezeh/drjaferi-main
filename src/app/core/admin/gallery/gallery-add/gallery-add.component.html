@@ -1,0 +1,24 @@
+<p-toast position="center"></p-toast>
+<div style="direction: rtl; text-align: right">
+    <form [formGroup]="form" (ngSubmit)="submitForm()" class="mt-3">
+        <div class="row">
+            <div class="col-lg-12">
+                <p-fileUpload chooseLabel="انتخاب تصویر" uploadLabel="آپلود تصویر" cancelLabel="انصراف"
+                    [customUpload]="true" (uploadHandler)="onFileUpload($event)"
+                    invalidFileSizeMessageDetail="حداکثر سایز فایل 2 مگابایت می باشد"
+                    invalidFileSizeMessageSummary="اندازه فایل بیش از حد مجاز می باشد" accept="image/jpeg,image/png"
+                    [maxFileSize]="2000000">
+                </p-fileUpload>
+            </div>
+            <div class="col-lg-3 col-sm-12 mb-3">
+                <input  formControlName="alt" name="alt"
+                    pInputText placeholder="توضیح تصویر" />
+            </div>
+        </div>
+        <div class="row text-center mt-4">
+            <div class="col-lg-12">
+                <button type="submit" pButton label="ثبت" [disabled]="!form.valid"></button>
+            </div>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,80 @@
+<p-toast position="center"></p-toast>
+
+<div id="contact" class="container">
+  <div class="row">
+    <div class="col-lg-10 mx-auto ">
+      <div class="card flex-row my-5  shadow rounded-3 overflow-hidden">
+        <div class="card-img-left d-none d-md-flex">
+        </div>
+        <div class="card-body p-4 p-sm-5">
+          <h5 class="card-title text-center mb-3 fw-light fs-5">تماس با ما</h5>
+          <div id="links">
+            <div class="container">
+              <div class="social-links">
+                <a href="mailto:info@drjaferi.ir" class="email"><i class="bi bi-envelope"></i></a>
+                <a href="https://www.instagram.com/apprad.ir/" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="https://t.me/app_rad" class="telegram"><i class="bx bxl-telegram"></i></a>
+                <a href="https://wa.me/989124666462" class="whatsapp"><i class="bx bxl-whatsapp"></i></a>
+                <a href="tel:+989124666462" class="telephone"><i class="bi bi-telephone"></i></a>
+              </div>
+            </div>
+          </div>
+          <form [formGroup]="form" (ngSubmit)="addContactMessage()" >
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" formControlName="fullName" placeholder="myusername" required>
+              <label for="floatingInputUsername">نام و نام خانوادگی </label>
+              <ul class="mt-1 text-danger list-inline" *ngFor="let error of errorMessages.fullName">
+                <li *ngIf="form.get('fullName').hasError(error.type) &&
+                  (form.get('fullName').dirty || form.get('fullName').touched)">
+                  {{ error.message }}
+                </li>
+              </ul>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" formControlName="mobile" placeholder="mobile"  maxlength="11" minlength="11" required>
+              <label for="floatingInputmobile">شماره همراه</label>
+              <ul class="mt-1 text-danger list-inline" *ngFor="let error of errorMessages.mobile">
+                <li *ngIf="form.get('mobile').hasError(error.type) &&
+                  (form.get('mobile').dirty || form.get('mobile').touched)">
+                  {{ error.message }}
+                </li>
+              </ul>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" formControlName="email" placeholder="myusername" required>
+              <label for="floatingInputemail">ایمیل</label>
+              <ul class="mt-1 text-danger list-inline" *ngFor="let error of errorMessages.email">
+                <li *ngIf="form.get('email').hasError(error.type) &&
+                  (form.get('email').dirty || form.get('email').touched)">
+                  {{ error.message }}
+                </li>
+              </ul>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" formControlName="title" placeholder="myusername" required>
+              <label for="floatingInputtitle">موضوع</label>
+              <ul class="mt-1 text-danger list-inline" *ngFor="let error of errorMessages.title">
+                <li *ngIf="form.get('title').hasError(error.type) &&
+                  (form.get('title').dirty || form.get('title').touched)">
+                  {{ error.message }}
+                </li>
+              </ul>
+            </div>
+            <div class="wrap-input1 validate-input " required>
+              <textarea class="input1" rows="5" formControlName="message" placeholder="پیغام"></textarea>
+              <ul class="mt-1 text-danger list-inline" *ngFor="let error of errorMessages.message">
+                <li *ngIf="form.get('message').hasError(error.type) &&
+                    (form.get('message').dirty || form.get('message').touched)">
+                  {{ error.message }}
+                </li>
+              </ul>
+            </div>
+            <div class="mb-2 text-center">
+              <button class="btn btn-login" type="submit">ارسال</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

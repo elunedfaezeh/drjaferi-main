@@ -1,0 +1,48 @@
+<p-toast position="center"></p-toast>
+<section class="form">
+    <div row justify-content-center>
+        <div class="col-lg-6 text-center">
+            <div *ngFor="let error of errorMessages.fullName">
+                <div class="alert alert-danger text-center" role="alert" *ngIf="
+               form.get('fullName').hasError(error.type) &&  (form.get('fullName').dirty || form.get('fullName').touched)">
+                    {{ error.message }}
+                </div>
+            </div>
+            <div *ngFor="let error of errorMessages.email">
+                <div class="alert alert-danger text-center" role="alert"
+                    *ngIf="
+               form.get('email').hasError(error.type) &&  (form.get('email').dirty || form.get('email').touched)">
+                    {{ error.message }}
+                </div>
+            </div>
+        </div>
+
+        <form [formGroup]="form" (ngSubmit)="submitForm()">
+            <div class="row align-items-center">
+                <div class="col-lg-3 col-sm-12 mb-3">
+                    <label class="form-label">شماره همراه</label>
+                    <input type="text" placeholder="شماره همراه" pInputText formControlName="mobile" />
+                </div>
+                <div class="col-lg-3 col-sm-12 mb-3">
+                    <label class="form-label">نام و نام خانوادگی</label>
+                    <input type="text" pInputText placeholder="نام و نام خانوادگی" formControlName="fullName"
+                        required />
+                </div>
+
+                <div class="col-lg-3 col-sm-12 mb-3">
+                    <label class="form-label">تلفن ثابت</label>
+                    <input type="text" pInputText placeholder="تلفن ثابت" formControlName="phone" />
+                </div>
+                <div class="col-lg-3 col-sm-12 mb-3">
+                    <label class="form-label">ایمیل</label>
+                    <input type="email" pInputText placeholder="ایمیل" formControlName="email" required />
+                </div>
+
+                <div class="col-lg-12 text-center mt-5">
+                    <p-button type="submit" [disabled]="!form.valid" label="مرحله بعد" styleClass="p-button-rounded">
+                    </p-button>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>

@@ -1,0 +1,56 @@
+input,
+:host::ng-deep .p-inputtext,
+:host::ng-deep .p-dropdown,
+:host::ng-deep .p-chips,
+.p-inputtext,
+.p-dropdown,
+.p-chips,
+textarea {
+  width: 100% !important;
+}
+
+
+label {
+  font-size: 18px;
+  color: #444;
+  font-family: IRANSans_Light !important;
+  text-align: right;
+}
+
+:host::ng-deep .p-button .p-button-icon-left {
+  margin-left: 5px;
+}
+:host::ng-deep .p-button-label {
+  font-family: IRANSans_Bold !important;
+  font-size: 14px;
+}
+:host::ng-deep .p-listbox .p-listbox-list .p-listbox-item {
+  font-size: 16px;
+  color: #444;
+  font-family: IRANSans_Light !important;
+}
+
+:host::ng-deep .p-listbox .p-checkbox .p-checkbox-box {
+  margin-left: 1px;
+  float: right;
+}
+
+:host::ng-deep .p-listbox {
+  direction: ltr;
+}
+
+:host::ng-deep .p-listbox .p-listbox-list .p-listbox-empty-message {
+  font-size: 16px;
+  color: #444;
+  font-family: IRANSans_Light !important;
+}
+
+:host::ng-deep .p-button{
+  background-color: #20b66f;
+  border-color: #20b66f;
+}
+
+:host::ng-deep .p-button:hover {
+  background-color: #20b66f;
+  border-color: #20b66f;
+}

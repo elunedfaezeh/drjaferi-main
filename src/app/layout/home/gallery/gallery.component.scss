@@ -1,0 +1,52 @@
+.gallery {
+  direction: ltr;
+  padding: 30px;
+  align-items: center;
+}
+
+.gallery h1 {
+  font-family: IRANSans_Bold !important;
+  margin-bottom: 30px;
+}
+
+
+// :host ::ng-deep .p-card {
+//   margin: 50px;
+//   background: linear-gradient(135deg, #ccc1b6 0%, #e2d1c3 100%);
+// }
+
+.gallery img {
+  max-width: 99%;
+  border-radius: 11px;
+
+}
+
+:host::ng-deep .p-carousel .p-carousel-indicators .p-carousel-indicator.p-highlight button {
+  background-color: #7D4A2B;
+  border-radius: 20px;
+  margin-top: 15px;
+}
+
+:host::ng-deep .p-carousel .p-carousel-indicators .p-carousel-indicator button {
+  border-radius: 20px;
+  margin-top: 15px;
+}
+
+::ng-deep .p-carousel .p-carousel-header {
+  margin-bottom: 15px;
+  font-family: 'IRANSans_Bold' !important;
+}
+
+::ng-deep .p-carousel .p-carousel-content .p-carousel-prev {
+  background-color: #f3f3f3 !important;
+}
+
+::ng-deep .p-carousel .p-carousel-content .p-carousel-next {
+  background-color: #f3f3f3 !important;
+}
+
+@media (max-width: 991px) {
+  .gallery {
+    padding: 5px;
+  }
+}

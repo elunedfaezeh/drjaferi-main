@@ -1,0 +1,59 @@
+li {
+  font-family: 'IRANSans_Bold' !important;
+  font-size: 12px;
+}
+
+.login {
+  padding: 7em 0;
+}
+
+.login-wrap {
+  position: relative;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.login-wrap .icon {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background: #aa8b77;
+  padding: 25px 0;
+}
+
+.login-wrap .icon img {
+  max-width: 100px;
+  filter: brightness(0) invert(1);
+}
+
+input {
+  font-family: 'IRANSans_Bold' !important;
+  font-size: 14px;
+}
+
+input::placeholder {
+  color: #777;
+  font-size: 12px;
+  padding-right: 5px;
+  font-family: IRANSans_Bold !important;
+}
+
+.btn {
+  background: #aa8b77;
+  border: 1px solid #aa8b77 !important;
+  color: #fff !important;
+  font-family: 'IRANSans_Bold' !important;
+  border-radius: 25px;
+  padding: 10px 20%;
+  margin-top: 20px;
+}
+
+.btn:hover {
+  background: #a8866e;
+}
+
+.verify {
+  padding: 0 30px;
+  font-family: 'IRANSans_Bold' !important;
+  font-size: 14px;
+}

@@ -1,0 +1,32 @@
+<p-toast position="center"></p-toast>
+<div style="direction: rtl; text-align: right">
+  <form [formGroup]="form" (ngSubmit)="submitForm()" class="mt-3">
+    <div class="p-fluid p-formgrid p-grid">
+      <div class="p-field p-col">
+        <input id="question" type="text" pInputText formControlName="question" placeholder="سوال"/>
+        <ul class="text-right list-inline" *ngFor="let error of errorMessages.question">
+          <li class="font-small text-danger font-title-bold list-inline-item" *ngIf="
+              form.get('question').hasError(error.type) &&
+              (form.get('question').dirty || form.get('question').touched)">{{ error.message }}
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="p-fluid p-formgrid p-grid">
+      <div class="p-field p-col">
+        <textarea id="reply" type="text" pInputText formControlName="reply" rows="3" placeholder="پاسخ"></textarea>
+        <ul class="text-right list-inline" *ngFor="let error of errorMessages.reply">
+          <li class="font-small text-danger font-title-bold list-inline-item" *ngIf="
+              form.get('reply').hasError(error.type) &&
+              (form.get('reply').dirty || form.get('reply').touched)">{{ error.message }}
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row text-center">
+      <p-button type="submit" [disabled]="!form.valid" label="ثبت"></p-button>
+    </div>
+
+  </form>
+</div>

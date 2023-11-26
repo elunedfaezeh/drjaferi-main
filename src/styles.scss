@@ -1,0 +1,72 @@
+@font-face {
+    font-family: 'IRANSans_Bold';
+    src: url('./assets/fonts/IRANSansWeb\(FaNum\)_Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'IRANSans_Light';
+    src: url('./assets/fonts/IRANSansWeb\(FaNum\)_Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'myfont';
+    font-style: normal;
+    font-weight: normal;
+    src: url(./assets/fonts/Caveat-VariableFont_wght.ttf);
+}
+
+:root {
+    --color1: #689F38;
+    --color2: #f45050;
+    --color3: #9c9c9c;
+}
+
+body {
+    font-family: IRANSans_Light !important;
+    font-size: 14px;
+    direction: rtl;
+    //background-color: #e5f1e7;
+    font-family: myfont !important;
+}
+
+a,
+a:hover {
+    outline-color: #ced4da;
+    text-decoration: none;
+    color: inherit;
+}
+
+*:focus-within {
+    outline-color: #ced4da;
+    border-color: #ced4da !important;
+}
+
+*:focus {
+
+    outline-color: #ced4da;
+    border-color: #ced4da !important;
+}
+
+.p-inputtext:hover {
+    border-color: #ced4da !important;
+    outline-color: #ced4da;
+}
+
+:host::ng-deep .p-dropdown {
+    border-color: #ced4da !important;
+    outline-color: #ced4da;
+}
+
+:host::ng-deep .p-dropdown:hover {
+    border-color: #ced4da !important;
+    outline-color: #ced4da;
+}
+
+:host::ng-deep .p-dropdown .p-dropdown-label:hover{
+    border-color: #ced4da !important;
+    outline-color: #ced4da;
+}

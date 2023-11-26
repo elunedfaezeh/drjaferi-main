@@ -1,0 +1,192 @@
+<section class="form">
+    <div class="row">
+        <div class="col-lg-12">
+            <div *ngFor="let error of errorMessages.title">
+                <div class="alert alert-danger" role="alert" *ngIf="
+               form.get('title').hasError(error.type) &&  (form.get('title').dirty || form.get('title').touched)">
+                    {{ error.message }}
+                </div>
+            </div>
+            <div *ngFor="let error of errorMessages.pcbThickness">
+                <div class="alert alert-danger" role="alert"
+                    *ngIf="
+               form.get('pcbThickness').hasError(error.type) &&  (form.get('pcbThickness').dirty || form.get('pcbThickness').touched)">
+                    {{ error.message }}
+                </div>
+            </div>
+            <div *ngFor="let error of errorMessages.material">
+                <div class="alert alert-danger" role="alert"
+                    *ngIf="
+               form.get('material').hasError(error.type) &&  (form.get('material').dirty || form.get('material').touched)">
+                    {{ error.message }}
+                </div>
+            </div>
+            <div *ngFor="let error of errorMessages.copperThickness">
+                <div class="alert alert-danger" role="alert"
+                    *ngIf="
+               form.get('copperThickness').hasError(error.type) &&  (form.get('copperThickness').dirty || form.get('copperThickness').touched)">
+                    {{ error.message }}
+                </div>
+            </div>
+            <div *ngFor="let error of errorMessages.pcbType">
+                <div class="alert alert-danger" role="alert"
+                    *ngIf="
+               form.get('pcbType').hasError(error.type) &&  (form.get('pcbType').dirty || form.get('pcbType').touched)">
+                    {{ error.message }}
+                </div>
+            </div>
+            <div *ngFor="let error of errorMessages.cover">
+                <div class="alert alert-danger" role="alert"
+                    *ngIf="
+               form.get('cover').hasError(error.type) &&  (form.get('cover').dirty || form.get('cover').touched)">
+                    {{ error.message }}
+                </div>
+            </div>
+            <div *ngFor="let error of errorMessages.celeryPrint">
+                <div class="alert alert-danger" role="alert"
+                    *ngIf="
+               form.get('celeryPrint').hasError(error.type) &&  (form.get('celeryPrint').dirty || form.get('celeryPrint').touched)">
+                    {{ error.message }}
+                </div>
+            </div>
+            <div *ngFor="let error of errorMessages.partsPrinting">
+                <div class="alert alert-danger" role="alert"
+                    *ngIf="
+               form.get('partsPrinting').hasError(error.type) &&  (form.get('partsPrinting').dirty || form.get('partsPrinting').touched)">
+                    {{ error.message }}
+                </div>
+            </div>
+
+         
+            <form [formGroup]="form" (ngSubmit)="submitForm()">
+                <div class="col-lg-12 col-sm-12 mb-3">
+                    <div class="row align-items-center">
+                        <div class="col-lg-3 col-sm-12 mb-3">
+                            <input name="title" type="text" pInputText placeholder="عنوان سفارش"
+                                formControlName="title" required/>
+                        </div>
+                        <div class="col-lg-3 col-sm-12 mb-3">
+                            <p-dropdown [options]="pcbType" placeholder="نوع مدار" formControlName="pcbType"
+                                optionLabel="title" optionValue="title" [required]="true" ></p-dropdown>
+                        </div>
+                        <div class="col-lg-3 col-sm-12 mb-3">
+                            <p-dropdown [options]="materials" placeholder="جنس برد" formControlName="material"
+                                optionValue="title" optionLabel="title"  [required]="true" ></p-dropdown>
+                        </div>
+                        <div class="col-lg-3 col-sm-12 mb-3">
+                            <p-dropdown [options]="copperThickness" placeholder="ضخامت مس"
+                                formControlName="copperThickness" optionLabel="title" optionValue="title"  [required]="true">
+                            </p-dropdown>
+                        </div>
+                        <div class="col-lg-3 col-sm-12 mb-3">
+                            <p-dropdown [options]="cover" placeholder="پوشش نهایی" formControlName="cover"
+                                optionLabel="title" optionValue="title"  [required]="true"></p-dropdown>
+                        </div>
+                        <div class="col-lg-3 col-sm-12 mb-3">
+                            <p-dropdown [options]="celeryPrint" placeholder="چاپ سلدر" formControlName="celeryPrint"
+                                optionLabel="title" optionValue="title"  [required]="true">
+                            </p-dropdown>
+                        </div>
+                        <div class="col-lg-3 col-sm-12 mb-3">
+                            <p-dropdown [options]="protectiveColor" placeholder="رنگ چاپ محافظ"
+                                formControlName="protectiveColor" optionLabel="title" optionValue="title">
+                            </p-dropdown>
+                        </div>
+                        <div class="col-lg-3 col-sm-12 mb-3">
+                            <p-dropdown [options]="partsPrinting" placeholder="چاپ قطعات"
+                                formControlName="partsPrinting" optionLabel="title" optionValue="title"  [required]="true">
+                            </p-dropdown>
+                        </div>
+                        <div class="col-lg-3 col-sm-12 mb-3">
+                            <p-dropdown [options]="partsColor" placeholder="رنگ چاپ قطعات" formControlName="partsColor"
+                                optionLabel="title" optionValue="title">
+                            </p-dropdown>
+                        </div>
+
+                        <div class="col-lg-3 col-sm-12 mb-3">
+                            <input type="text" pInputText placeholder="ضخامت مدار چاپی"
+                                formControlName="pcbThickness" required />
+                        </div>
+
+
+                        <div class="col-lg-3 col-sm-12 mb-3">
+                            <input type="text" pInputText placeholder="ابعاد برد (میلی متر) X"
+                                formControlName="dimensionsBoardX" />
+                        </div>
+                        <div class="col-lg-3 col-sm-12 mb-3">
+                            <input type="text" pInputText placeholder="ابعاد برد (میلی متر) Y"
+                                formControlName="dimensionsBoardY" required />
+                        </div>
+                        <div class="number col-lg-3 col-sm-12 mb-3 text-center">
+                            <p-inputNumber formControlName="number" [showButtons]="true" placeholder="تعداد"
+                                buttonLayout="horizontal" inputId="horizontal" spinnerMode="horizontal" [step]="1"
+                                decrementButtonClass="p-button-danger" incrementButtonClass="p-button-success"
+                                incrementButtonIcon="pi pi-plus" decrementButtonIcon="pi pi-minus" mode="decimal"
+                                [min]="1" [max]="100000000000">
+                            </p-inputNumber>
+                        </div>
+                        <div class="col-lg-3 col-sm-12 mb-3">
+                            <div class="row align-items-center justify-content-center">
+                                <div class="col-lg-5 ">
+                                    <label class="title">آزمایش الکتریکی<br/>(E-test)</label>
+                                </div>
+                                <div class="col-lg-7 text-center">
+                                    <p-selectButton [options]="eTest" formControlName="eTest"
+                                        optionLabel="title" optionValue="title">
+                                    </p-selectButton>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-12 mb-3">
+                            <div class="row align-items-center justify-content-center">
+                                <div class="col-lg-4 ">
+                                    <label class="title">چاپ کربن</label>
+                                </div>
+                                <div class="col-lg-8 text-center">
+                                    <p-selectButton [options]="carbonPrinting" formControlName="carbonPrinting"
+                                        optionLabel="title" optionValue="title">
+                                    </p-selectButton>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-sm-12 mb-3">
+                            <div class="row">
+                                <div class="col-lg-3">
+                                    <label class="title">برش نهایی</label>
+                                </div>
+                                <div class="col-lg-9">
+                                    <div class="row">
+                                        <div *ngFor="let item of finalCut" class="col-lg-4 field-checkbox">
+                                            <p-checkbox name="group" [value]="item" [optionValue]="item.name"
+                                                [inputId]="item.name" (onChange)="onCheck($event)"></p-checkbox>
+                                            <label class="checkbox" [for]="item.name">{{item.name}}</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="upload col-lg-12 col-sm-12 mb-3">
+                            <p-fileUpload [customUpload]="true" (uploadHandler)="onFileUpload($event)"
+                                chooseLabel="انتخاب فایل" uploadLabel="آپلود" cancelLabel="انصراف" [multiple]="true"
+                                accept=".rar,.pcb,.PcbDoc"
+                                invalidFileSizeMessageDetail="حداکثر سایز فایل 2 مگابایت می باشد"
+                                invalidFileSizeMessageSummary="اندازه فایل بیش از حد مجاز می باشد"
+                                [maxFileSize]="10000000">
+                            </p-fileUpload>
+                        </div>
+                        <div class="col-lg-12 col-sm-12 mb-3">
+                            <textarea rows="5" placeholder="توضیحات" pInputTextarea
+                                formControlName="description"></textarea>
+                        </div>
+                        <div pRipple class="submit col-lg-12 text-center mt-2">
+                            <p-button type="submit" [disabled]="!form.valid" label="ثبت سفارش"></p-button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <ng-template pTemplate="footer">
+
+            </ng-template>
+        </div>
+    </div>
+</section>

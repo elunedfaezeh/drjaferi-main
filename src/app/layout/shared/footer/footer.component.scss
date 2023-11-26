@@ -1,0 +1,42 @@
+.footer {
+  margin-top: 20px;
+  padding-top: 20px;
+  background: #0e3755;
+  font-family: IRANSans_Light !important;
+  color: #fff;
+  text-align: center;
+}
+
+.footer .text {
+  margin-bottom: 10px;
+}
+.footer .icons {
+padding: 20px;
+}
+.footer .icons .icon{
+  color: #aa8b77;
+  font-size: 30px;
+}
+.item{
+  padding: 20px;
+  border-right: rgb(#fff,.3 ) 1px solid;
+}
+.footer .icons .item h4{
+  font-family: IRANSans_Light !important;
+margin-top: 10px;
+
+  font-size: 15px;
+}
+.footer .text p {
+  font-size: 13px;
+}
+
+.footer .text a {
+  font-size: 11px;
+}
+
+@media (max-width: 991px) {
+  .footer .text {
+    font-size: 12px;
+  }
+}
