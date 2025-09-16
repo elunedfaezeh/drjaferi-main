@@ -1,3 +1,39 @@
+# Akbar Jafari Legal Consultation Platform
+
+[Live Website](https://drjaferi.ir)
+
+**Akbar Jafarie Legal Consultation** is an online platform for legal advice built with Angular and TypeScript.  
+It provides two main panels:  
+- **Admin Panel**  
+- **User Panel**
+
+Users can select the **reason for visiting a lawyer** from predefined categories, submit their case details, and manage their consultation requests.  
+
+## Features
+
+- **Admin Panel**: Manage users, consultations, and case data  
+- **User Panel**: Request legal consultations, track case progress  
+- **Login/Authentication**: Secure login for both admins and users  
+- **Category Selection**: Choose the reason for visiting a lawyer  
+- **Case Submission**: Users can submit their case details and documents  
+- **Stepper**: Step-by-step consultation request workflow  
+- **Datepicker**: Schedule consultation appointments  
+- **Responsive Design**: Mobile and desktop friendly using **Bootstrap**  
+
+
+## Technologies Used
+
+- [Angular](https://angular.io/) + TypeScript  
+- [Bootstrap](https://getbootstrap.com/)  
+- Angular Material components (Datepicker, Stepper)  
+- Git/GitHub for version control  
+
+
+
+
+
+
+
 # Project
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.2.
