@@ -28,7 +28,6 @@ Users can select the **reason for visiting a lawyer** from predefined categories
 - Angular Material components (Datepicker, Stepper)  
 - Git/GitHub for version control  
 
----
 
 # 📁 Project
 
